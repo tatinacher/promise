@@ -27,7 +27,7 @@ class Promise {
       typeof value === "object" &&
       typeof value.then === "function"
     ) {
-      value.then(this.settle(state.FULFILLED), this.settle(state.FULFILLED));
+      value.then(this.settle(state.FULFILLED), this.settle(state.REJECTED));
       return;
     }
 
